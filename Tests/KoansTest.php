@@ -64,7 +64,8 @@ class KoansTest
      */
     public function testExercises()
     {
-        array_walk($this->exercisesInChapter(), function ($exercise) {
+        $exercisesInChapter = $this->exercisesInChapter();
+        array_walk($exercisesInChapter, function ($exercise) {
             $this->testExercise($exercise);
         });
     }
